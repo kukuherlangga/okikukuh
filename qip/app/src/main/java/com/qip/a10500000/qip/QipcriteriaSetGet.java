@@ -5,7 +5,7 @@ package com.qip.a10500000.qip;
  */
 
 public class QipcriteriaSetGet {
-    int criteriaId, Idjenisitem;
+    int criteriaId;
     String criteriadesc,standatreceive,cs1_utd,cs2_utd,cs3_utd,cs4_utd,cs5_utd,
             cs1_sampling,cs2_sampling,cs3_sampling,cs4_sampling,cs5_sampling;
 
@@ -15,14 +15,6 @@ public class QipcriteriaSetGet {
 
     public void setCriteriaId(int criteriaId) {
         this.criteriaId = criteriaId;
-    }
-
-    public int getIdjenisitem() {
-        return Idjenisitem;
-    }
-
-    public void setIdjenisitem(int idjenisitem) {
-        Idjenisitem = idjenisitem;
     }
 
     public String getCriteriadesc() {

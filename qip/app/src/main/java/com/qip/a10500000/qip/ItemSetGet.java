@@ -14,9 +14,7 @@ public class ItemSetGet {
         this.itemName = itemName;
     }
 
-    public String getUTD() {
-        return UTD;
-    }
+    public String getUTD() {return UTD;}
 
     public void setUTD(String UTD) {
         this.UTD = UTD;

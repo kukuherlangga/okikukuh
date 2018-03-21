@@ -5,15 +5,7 @@ package com.qip.a10500000.qip;
  */
 
 public class InfotruckSetGet {
-    int truckId,Idtruckcondition,Idsuhutruck,Idjenistruck,Idseal;
-
-    public int getIdseal() {
-        return Idseal;
-    }
-
-    public void setIdseal(int idseal) {
-        Idseal = idseal;
-    }
+    int truckId,Idtruckcondition,Idsuhutruck,Idjenistruck;
 
     public int getTruckId() {
         return truckId;

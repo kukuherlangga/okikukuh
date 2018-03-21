@@ -6,9 +6,7 @@ package com.qip.a10500000.qip;
 
 public class QipSetGet {
     int qipId;
-    int itemId;
     int supplierId;
-    int jenisitemId;
     int truckId;
     int labelId;
     int coaId;
@@ -23,28 +21,12 @@ public class QipSetGet {
         this.qipId = qipId;
     }
 
-    public int getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
-    }
-
     public int getSupplierId() {
         return supplierId;
     }
 
     public void setSupplierId(int supplierId) {
         this.supplierId = supplierId;
-    }
-
-    public int getJenisitemId() {
-        return jenisitemId;
-    }
-
-    public void setJenisitemId(int jenisitemId) {
-        this.jenisitemId = jenisitemId;
     }
 
     public int getTruckId() {

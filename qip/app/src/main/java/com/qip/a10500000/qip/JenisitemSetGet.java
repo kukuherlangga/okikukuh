@@ -5,8 +5,16 @@ package com.qip.a10500000.qip;
  */
 
 public class JenisitemSetGet {
-    int jenisitemId;
+    int jenisitemId,Idcriteria;
     String jenisitem;
+
+    public int getIdcriteria() {
+        return Idcriteria;
+    }
+
+    public void setIdcriteria(int idcriteria) {
+        Idcriteria = idcriteria;
+    }
 
     public int getJenisitemId() {
         return jenisitemId;

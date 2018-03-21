@@ -7,174 +7,431 @@
     android:orientation="vertical"
     tools:context="com.qip.a10500000.qip.MainActivity">
 
-    <Spinner
-        android:id="@+id/droplistItem"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"
-
-        />
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="5"
-
-        android:id="@+id/table"
-
+        android:layout_gravity="center"
         >
-        <TableRow>
-            <TextView
-                android:layout_column="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nama Item"
-                android:padding="10dip"
-
-                />
-            <TextView
-                android:layout_column="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jenis Item"
-                android:padding="10dip"
-
-                />
-            <TextView
-                android:layout_column="3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quantity"
-                android:padding="10dip"
-
-                />
-            <TextView
-                android:layout_column="4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UTD"
-                android:padding="10dip"
-
-                />
-            <TextView
-                android:layout_column="5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Berat"
-                android:padding="10dip"
-
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_column="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="10dip"
-                android:id="@+id/tableNamaItem"
-
-                />
-            <TextView
-                android:layout_column="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="10dip"
-                android:id="@+id/tableJenisItem"
-
-                />
-            <TextView
-                android:layout_column="3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="10dip"
-                android:id="@+id/tableQty"
-
-                />
-            <TextView
-                android:layout_column="4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="10dip"
-                android:id="@+id/tableUtd"
-
-                />
-            <TextView
-                android:layout_column="5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="10dip"
-                android:id="@+id/tableBerat"
-
-                />
-        </TableRow>
-
-
-    </TableLayout>
-
-    <TextView
+    <Button
+        android:id="@+id/showItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item Name :"
-        android:id="@+id/namaItem"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemName"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jenis Item :"
-        android:id="@+id/jnsItem"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/jenisItem"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quantity :"
-        android:id="@+id/lblqty"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/qty"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Expires Time :"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/utd"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Berat :"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/berat"
+        android:text="Add Item"
+        android:textSize="10dp"
         />
     <Button
+        android:id="@+id/showSupplier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="add item"
-        android:id="@+id/submit"
+        android:text="Add Supplier"
+        android:textSize="10dp"
         />
+    <Button
+        android:id="@+id/showDetailPenerimaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Penerimaan"
+        android:textSize="10dp"
+        />
+    </LinearLayout>
 
+
+    <ScrollView
+        android:id="@+id/showdetailpenerimaan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility=""
+        android:paddingTop="75dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/droplistSupplier"
+                android:spinnerMode="dropdown">
+            </Spinner>
+
+            <TableLayout
+                android:id="@+id/Table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:stretchColumns="5"
+
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dip"
+                        android:text="Nama Supplier"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:padding="10dip"
+                        android:text="Nama Item"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="10dip"
+                        android:text="Quantity"
+
+                        />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/tableSuppliername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:padding="10dip"
+                        android:text=""
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tableItemname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:padding="10dip"
+                        android:text=""
+                        />
+
+                    <TextView
+                        android:id="@+id/tableQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:padding="10dip"
+                        android:text=""
+                        />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Tanggal:"
+                android:textSize="12dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:stretchColumns="2">
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:hint="ex: 03-03-2018"
+                        android:inputType="date" />
+
+                    <Button
+                        android:id="@+id/bt_datepicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="Show"
+                        android:textSize="6dp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/PO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="PO#"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Supplier :" />
+
+            <EditText
+                android:id="@+id/Supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:paddingTop="75dp"
+        android:id="@+id/showsupplier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supplier Name :" />
+
+        <EditText
+            android:id="@+id/namaSupplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Negara Asal :" />
+
+        <EditText
+            android:id="@+id/NegaraAsal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Spinner
+            android:id="@+id/droplistItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+
+            />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:stretchColumns="5"
+
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="10dip"
+                    android:text="Nama Item"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:padding="10dip"
+                    android:text="WRIN"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:padding="10dip"
+                    android:text="Quantity"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:padding="10dip"
+                    android:text="UTD"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:padding="10dip"
+                    android:text="Berat"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tableNamaItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="10dip"
+                    android:text=""
+
+                    />
+
+                <TextView
+                    android:id="@+id/tableWrin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:padding="10dip"
+                    android:text=""
+
+                    />
+
+                <TextView
+                    android:id="@+id/tableQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="3"
+                    android:padding="10dip"
+                    android:text=""
+
+                    />
+
+                <TextView
+                    android:id="@+id/tableUtd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="4"
+                    android:padding="10dip"
+                    android:text=""
+
+                    />
+
+                <TextView
+                    android:id="@+id/tableBerat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="5"
+                    android:padding="10dip"
+                    android:text=""
+
+                    />
+            </TableRow>
+
+
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitSupplier"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:paddingTop="75dp"
+        android:id="@+id/showitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Item :" />
+
+        <EditText
+            android:id="@+id/itemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WRIN" />
+
+        <EditText
+            android:id="@+id/WRIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity :" />
+
+        <EditText
+            android:id="@+id/qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UTD :" />
+
+        <EditText
+            android:id="@+id/utd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Berat :" />
+
+        <EditText
+            android:id="@+id/berat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitItem"
+            />
+
+
+
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -7,4 +7,20 @@ package com.qip.a10500000.qip;
 public class DataSetGet {
     int sealId;
     String poId;
+
+    public int getSealId() {
+        return sealId;
+    }
+
+    public void setSealId(int sealId) {
+        this.sealId = sealId;
+    }
+
+    public String getPoId() {
+        return poId;
+    }
+
+    public void setPoId(String poId) {
+        this.poId = poId;
+    }
 }
