@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         >
     <Button
         android:id="@+id/showItem"
@@ -40,7 +41,7 @@
         android:id="@+id/showdetailpenerimaan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility=""
+        android:visibility="gone"
         android:paddingTop="75dp"
         >
 
@@ -230,13 +231,10 @@
             android:layout_height="wrap_content" />
 
 
-        <Spinner
-            android:id="@+id/droplistItem"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"
-
+            android:id="@+id/itemId"
             />
 
         <TableLayout

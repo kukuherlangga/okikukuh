@@ -229,7 +229,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // insertData(variable yang mau dimasukin)
     public boolean insertDataItem(String itemName,String WRIN,Integer qty,String utd,Integer berat) {
         //ngebuka database
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase  db = this.getWritableDatabase();
         //bikin contentvalues "content values untuk menampung data biar dimasukin ke database"
         ContentValues contentValues = new ContentValues();
         //contentValues.put(nama kolom table,nama variable yang mau dimasukin);
@@ -374,6 +374,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ist;
     }
 
+    public boolean insertDataTruck(Integer truckId,Integer Idtruckcondition,Integer Idsuhutruck,Integer Idjenistruck) {
+        //ngebuka database
+        SQLiteDatabase db = this.getWritableDatabase();
+        //bikin contentvalues "content values untuk menampung data biar dimasukin ke database"
+        ContentValues contentValues = new ContentValues();
+        //contentValues.put(nama kolom table,nama variable yang mau dimasukin);
+        contentValues.put(COL_TRUCK_INFO1,truckId);
+        contentValues.put(COL_TRUCK_INFO2,Idtruckcondition);
+        contentValues.put(COL_TRUCK_INFO3,Idsuhutruck);
+        contentValues.put(COL_TRUCK_INFO4,Idjenistruck);
 
-
+        //long "untuk membuat 1 array untuk menampung semua data yang mau dimasukin"
+        long result = db.insert(TABLE_INFO_TRUCK,null ,contentValues);
+        //ngecek kalo data udah masuk
+        return result != -1;
+        //nge return booleannya jadi true ke mainActivity.java
+    }
 }
